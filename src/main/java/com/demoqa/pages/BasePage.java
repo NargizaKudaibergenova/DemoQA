@@ -1,0 +1,23 @@
+package com.demoqa.pages;
+
+import com.demoqa.drivers.DriverManager;
+import com.demoqa.helper.BrowserHelper;
+import com.demoqa.helper.DropdownHelper;
+import com.demoqa.helper.WebElementActions;
+import org.openqa.selenium.support.PageFactory;
+
+import java.net.MalformedURLException;
+
+public abstract class BasePage { // основной класс
+
+    public BasePage() {
+        PageFactory.initElements(DriverManager.getDriver(), this);
+    }
+
+    public WebElementActions webElementActions = new WebElementActions();
+
+    public DropdownHelper dropdownHelper = new DropdownHelper(DriverManager.getDriver());
+
+
+
+}
