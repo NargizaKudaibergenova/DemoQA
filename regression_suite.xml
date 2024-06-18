@@ -3,7 +3,7 @@
 <suite name="Regression suite">
     <test verbose="2" preserve-order="true" name="C:/Users/Home/DemoQAWinter24">
         <classes>
-            <class name="ButtonsTest"></class>
+            <class name="ProgressBarTest"></class>
             <class name="FrameTest"></class>
             <class name="PracticeFormTest"></class>
         </classes>

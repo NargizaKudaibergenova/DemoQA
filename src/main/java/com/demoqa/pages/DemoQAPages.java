@@ -1,5 +1,4 @@
 package com.demoqa.pages;
-import com.demoqa.pages.OrangePage.OrangePage;
 import lombok.*;
 import org.testng.annotations.BeforeClass;
 
@@ -20,7 +19,6 @@ public class DemoQAPages {
     protected ProgressBarPage progressBarPage;
     protected SelectMenuPage selectMenuPage;
     protected WebTablePage webTablePage;
-    protected OrangePage orangePage;
 
 
     @BeforeClass(alwaysRun = true)//создаем обьекты тут как шаблон
@@ -34,7 +32,6 @@ public class DemoQAPages {
         practiceFormPage = new PracticeFormPage();
         selectMenuPage = new SelectMenuPage();
         webTablePage = new WebTablePage();
-        orangePage = new OrangePage();
 
     }
 }
