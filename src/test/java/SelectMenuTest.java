@@ -1,4 +1,4 @@
-import com.demoqa.drivers.DriverManager;
+
 import com.demoqa.enums.Endpoints;
 import com.demoqa.helper.DropdownHelper;
 import com.demoqa.utils.ConfigReader;
@@ -25,7 +25,7 @@ public class SelectMenuTest extends BaseTest {
 
 
     @Test
-    public void selectValueTest() throws InterruptedException {
+   public void selectValueTest() throws InterruptedException {
         browserHelper.open(ConfigReader.getValue("baseDevURL") + Endpoints.SELECTMENU.getEndpoint());
         //driver.get("https://demoqa.com/select-menu");
         demoQAPages.getSelectMenuPage().selectValue.click();
