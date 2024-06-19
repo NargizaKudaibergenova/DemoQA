@@ -191,7 +191,7 @@
         </profile>
 
         <profile>
-            <id>m</id>
+            <id>Regression</id>
             <build>
                 <plugins>
                     <plugin>
