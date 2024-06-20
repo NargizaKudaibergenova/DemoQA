@@ -6,6 +6,7 @@
             <class name="ProgressBarTest"></class>
             <class name="FrameTest"></class>
             <class name="PracticeFormTest"></class>
+            <class name="MenuTest"></class>
         </classes>
     </test>
 </suite>
