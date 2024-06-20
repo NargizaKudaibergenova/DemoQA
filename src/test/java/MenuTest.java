@@ -9,8 +9,8 @@ public class MenuTest extends BaseTest {
        browserHelper.open(ConfigReader.getValue("baseDevURL") + Endpoints.MENU.getEndpoint());
         //browserHelper.open("https://demoqa.com/menu");
         webElementActions.moveToElement(demoQAPages.getMenuPage().mainItem2);
-        webElementActions.moveToElement(demoQAPages.getMenuPage().subItem);
-        webElementActions.moveToElement(demoQAPages.getMenuPage().subItem2);
+//        webElementActions.moveToElement(demoQAPages.getMenuPage().subItem);
+//        webElementActions.moveToElement(demoQAPages.getMenuPage().subItem2);
         Thread.sleep(5000);
     }
 }

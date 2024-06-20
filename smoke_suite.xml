@@ -6,9 +6,9 @@
      </listeners> -->
     <test verbose="2" preserve-order="true" name="C:/Users/Home/DemoQAWinter24">
         <classes>
-            <class name="SelectMenuTest"></class>
+            <class name="MenuTest"></class>
             <class name="FrameTest"></class>
-            <class name="PracticeFormTest"></class>
+            <class name="TextBoxTest"></class>
         </classes>
     </test>
 </suite>
