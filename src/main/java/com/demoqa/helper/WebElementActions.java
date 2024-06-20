@@ -68,7 +68,7 @@ public class WebElementActions { //внутри этого класса хран
 //кликать при помощи JavascriptExecutor
     public WebElementActions jsClick(WebElement element){
         JavascriptExecutor js = (JavascriptExecutor) DriverManager.getDriver();
-        js.executeScript("argument[0].click();", element);
+        js.executeScript("arguments[0].click();", element);
         return this;
     }
 

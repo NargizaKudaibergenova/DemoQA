@@ -7,14 +7,16 @@ import static com.demoqa.enums.Endpoints.ALERTS;
 
 public class AlertTest extends BaseTest {
 
-    @Test (groups = {"Smoke", "UI", "1212"}, description = "Alert test")
-    @Description("Verify that alert is present")
-    @Owner("NArgiza")
-    @Tag("Smoke")
-    @Severity(SeverityLevel.CRITICAL)
-    @Story("GCPINT-8877")
+    @Description("Описание к методу")
+    @Owner("NArgiza, (ответственный за выполнение и поддержку теста)")
+    @Tag("Smoke") //добавления меток или тегов к тестовым методам, что позволяет лучше
+                // структурировать отчеты и фильтровать тесты по их атрибутам
+    @Severity(SeverityLevel.CRITICAL) //"для определения уровня серьёзности теста")
+    @Story("для указания истории или функциональности")
     @Epic("Registration")
-    @Link("www.google.com")
+    @Link("www.google.com") //ссылки
+
+    @Test (groups = {"Smoke", "UI", "1212"}, description = "Alert test")
     void alertTest() {
         browserHelper.open(ConfigReader.getValue("baseDevURL") + ALERTS.getEndpoint());
         //driver.get("https://demoqa.com/alerts");

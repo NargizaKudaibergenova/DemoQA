@@ -9,6 +9,7 @@
             <class name="MenuTest"></class>
             <class name="FrameTest"></class>
             <class name="TextBoxTest"></class>
+            <class name="SelectMenuTest"></class>
         </classes>
     </test>
 </suite>

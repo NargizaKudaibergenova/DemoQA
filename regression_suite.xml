@@ -4,9 +4,9 @@
     <test verbose="2" preserve-order="true" name="C:/Users/Home/DemoQAWinter24">
         <classes>
             <class name="ProgressBarTest"></class>
-            <class name="FrameTest"></class>
+            <class name="AlertTest"></class>
             <class name="PracticeFormTest"></class>
-            <class name="MenuTest"></class>
+            <class name="WebTableTest"></class>
         </classes>
     </test>
 </suite>

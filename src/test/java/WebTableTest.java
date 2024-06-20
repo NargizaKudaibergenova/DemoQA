@@ -1,8 +1,14 @@
 import com.demoqa.entities.EmployeeEntity;
 import com.demoqa.enums.Endpoints;
 import com.demoqa.utils.ConfigReader;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
+import java.time.Duration;
 import java.util.List;
 
 public class WebTableTest extends BaseTest {
@@ -36,12 +42,12 @@ public class WebTableTest extends BaseTest {
         for (EmployeeEntity employee : employees) {
             System.out.println(employee);
         }
-        System.out.println("");
+//        System.out.println("");
 
         for (String email : demoQAPages.getWebTablePage().emails) {
             System.out.println(email);
         }
-        System.out.println("");
+//        System.out.println("");
         Thread.sleep(7000);
         demoQAPages.getWebTablePage().removeFromList();
 
@@ -60,7 +66,7 @@ public class WebTableTest extends BaseTest {
         for (EmployeeEntity employee : employees) {
             System.out.println(employee);
         }
-        System.out.println("");
+        //System.out.println("");
         demoQAPages.getWebTablePage().editRandomFields();
 
         List<EmployeeEntity> employees1 = demoQAPages.getWebTablePage().getEmployeesAndEmailFromTable();

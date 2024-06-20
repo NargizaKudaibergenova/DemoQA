@@ -28,7 +28,10 @@ public class SelectMenuTest extends BaseTest {
    public void selectValueTest() throws InterruptedException {
         browserHelper.open(ConfigReader.getValue("baseDevURL") + Endpoints.SELECTMENU.getEndpoint());
         //driver.get("https://demoqa.com/select-menu");
-        demoQAPages.getSelectMenuPage().selectValue.click();
+
+        webElementActions.click(demoQAPages.getSelectMenuPage().selectValue);
+
+        //demoQAPages.getSelectMenuPage().selectValue.click();
 
         List<WebElement> options = demoQAPages.getSelectMenuPage().classMenu.findElements(By.xpath("//div[@class=' css-26l3qy-menu']"));
         for (WebElement option : options) {
@@ -41,7 +44,7 @@ public class SelectMenuTest extends BaseTest {
     public void selectOneTest() {
         browserHelper.open(ConfigReader.getValue("baseDevURL") + Endpoints.SELECTMENU.getEndpoint());
         //driver.get("https://demoqa.com/select-menu");
-        demoQAPages.getSelectMenuPage().selectOne.click();
+        webElementActions.click(demoQAPages.getSelectMenuPage().selectOne);
 
         List<WebElement> options2 = demoQAPages.getSelectMenuPage().selectOne.findElements(By.xpath("(//div[@class=' css-26l3qy-menu'])[1]"));
         for (WebElement option2 : options2) {
@@ -53,7 +56,7 @@ public class SelectMenuTest extends BaseTest {
     public void oldStyleSelectMenuTest() {
         browserHelper.open(ConfigReader.getValue("baseDevURL") + Endpoints.SELECTMENU.getEndpoint());
         //driver.get("https://demoqa.com/select-menu");
-        demoQAPages.getSelectMenuPage().oldStyleSelectMenu.click();
+        webElementActions.click(demoQAPages.getSelectMenuPage().oldStyleSelectMenu);
 
         List<WebElement> options3 = demoQAPages.getSelectMenuPage().oldStyleSelectMenu.findElements(By.xpath("//select[@id='oldSelectMenu']"));
         for (WebElement option3 : options3) {
@@ -65,7 +68,7 @@ public class SelectMenuTest extends BaseTest {
     public void multiselectDropDownTest() {
         browserHelper.open(ConfigReader.getValue("baseDevURL") + Endpoints.SELECTMENU.getEndpoint());
         //driver.get("https://demoqa.com/select-menu");
-        demoQAPages.getSelectMenuPage().multiselectDropDown.click();
+        webElementActions.click(demoQAPages.getSelectMenuPage().multiselectDropDown);
 
         List<WebElement> options4 = demoQAPages.getSelectMenuPage().multiselectDropDown.findElements(By.xpath("//div[@class=' css-26l3qy-menu']/div[1]"));
         for (WebElement option4 : options4) {
