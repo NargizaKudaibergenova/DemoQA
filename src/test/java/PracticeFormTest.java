@@ -21,7 +21,7 @@ public class PracticeFormTest extends BaseTest {
 
         String text = driver.findElement(By.xpath("//*[text()='Thanks for submitting the form']")).getText();
 
-        //Assert.assertEquals(text, "Thanks for submitting the form");
+        Assert.assertEquals(text, "Thanks for submitting the form");
 
     }
 
