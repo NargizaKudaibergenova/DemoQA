@@ -8,7 +8,7 @@
         <classes>
             <class name="MenuTest"></class>
             <class name="FrameTest"></class>
-            <class name="PracticeFormTest"></class>
+            <class name="TextBoxTest"></class>
         </classes>
     </test>
 </suite>
