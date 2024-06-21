@@ -9,6 +9,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import java.io.File;
 import java.time.Duration;
 import java.util.List;
 import java.util.Random;
@@ -82,18 +83,33 @@ public class PracticeFormPage extends BasePage {
 
 
     public PracticeFormPage fillPracticeForm(PracticeFormEntity practiceFormEntity) {
+
+        WebDriverWait wait = new WebDriverWait(DriverManager.getDriver(), Duration.ofSeconds(20));
+
         webElementActions.sendKeys(firstNameInput, practiceFormEntity.getFirstName())
                 .sendKeys(lastNameInput, practiceFormEntity.getLastName())
                 .sendKeys(emailInput, practiceFormEntity.getEmail())
                 .click(randomGender)
                 .sendKeys(mobileNumberInput, practiceFormEntity.getMobileNumber())
                 .sendKeysWithEnter(subjects, practiceFormEntity.getSubjects())
-                .click(randomHobbies)
-                .sendKeys(picture, practiceFormEntity.getPicture())
-                .sendKeys(currentAddressInput, practiceFormEntity.getCurrentAddress())
+                .click(randomHobbies);
+        // Логирование и проверка файла
+        String picturePath = practiceFormEntity.getPicture();
+        File pictureFile = new File(picturePath);
+        if (!pictureFile.exists()){
+            throw  new IllegalArgumentException("Файл не существует: " + picturePath);
+        }
+        System.out.println("Путь к картинке: " + picturePath);
+                webElementActions.sendKeys(picture, picturePath);
+
+                webElementActions.sendKeys(currentAddressInput, practiceFormEntity.getCurrentAddress())
                 .sendKeysWithEnter(stateInput, practiceFormEntity.getState())
                 .sendKeysWithEnter(cityInput, practiceFormEntity.getCity())
                 .click(submitBtn);
+
+        // Явное ожидание для проверки элемента
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text()='Thanks for submitting the form']")));
+
         return this;
     }
 
