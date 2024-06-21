@@ -95,13 +95,13 @@ public class PracticeFormPage extends BasePage {
                 .moveToElement(randomHobbies)
                 .click(randomHobbies);
         // Логирование и проверка файла
-        String picturePath = practiceFormEntity.getPicture();
-        File pictureFile = new File(picturePath);
-        if (!pictureFile.exists()){
-            throw  new IllegalArgumentException("Файл не существует: " + picturePath);
-        }
-        System.out.println("Путь к картинке: " + picturePath);
-                webElementActions.sendKeys(picture, picturePath);
+//        String picturePath = practiceFormEntity.getPicture();
+//        File pictureFile = new File(picturePath);
+//        if (!pictureFile.exists()){
+//            throw  new IllegalArgumentException("Файл не существует: " + picturePath);
+//        }
+//        System.out.println("Путь к картинке: " + picturePath);
+//                webElementActions.sendKeys(picture, picturePath);
 
                 webElementActions.sendKeys(currentAddressInput, practiceFormEntity.getCurrentAddress())
                 .sendKeysWithEnter(stateInput, practiceFormEntity.getState())
