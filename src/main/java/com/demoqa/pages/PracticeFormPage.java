@@ -92,6 +92,7 @@ public class PracticeFormPage extends BasePage {
                 .click(randomGender)
                 .sendKeys(mobileNumberInput, practiceFormEntity.getMobileNumber())
                 .sendKeysWithEnter(subjects, practiceFormEntity.getSubjects())
+                .moveToElement(randomHobbies)
                 .click(randomHobbies);
         // Логирование и проверка файла
         String picturePath = practiceFormEntity.getPicture();
